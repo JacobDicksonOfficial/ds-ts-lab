@@ -57,3 +57,14 @@ console.log(sortColleagues(colleagues.current, (a, b) => (a.contact.extension - 
 console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length),1));
 console.log(sortColleagues(colleagues.current, (a, b) => (a.name.length - b.name.length))); // NEW
 
+function addInterest(f: Friend, interest: string) {
+  if (!f.interests) {
+    f.interests = [];
+  }
+  f.interests.push(interest);
+  return f.interests;
+}
+
+console.log(addInterest(friends[0], "Politics"));
+
+
